@@ -1,0 +1,51 @@
+<resources>
+    <!--for option spinner-->
+    <string-array name="spinner_options">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <!--for typeDef spinner-->
+    <string-array name="spinner_type_def">
+        <item>1. Word</item>
+        <item>2. Short Definition</item>
+        <item>3. Long Definition</item>
+        <item>4. Characteristic</item>
+        <item>5. Example</item>
+        <item>6. YouTube URL</item>
+        <item>7. Tag</item>
+    </string-array>
+
+    <!--for country spinner-->
+    <string-array name="spinner_countries">
+        <item>Korea</item>
+        <item>England</item>
+        <item>France</item>
+    </string-array>
+
+    <!--for youtube-->
+    <string name="app_name">E-Slang</string>
+    <string name="title_activity_dictionary">Dictionary</string>
+    <string name="title_activity_add_word">AddWord</string>
+    <string name="player_error">Error initializing YouTube player: %s</string>
+    <string name="seek_to">Jump To</string>
+    <string name="seek_to_hint">Seconds</string>
+
+    <!--titles of headers-->
+    <string name="title_word">Word</string>
+    <string name="title_short_def">Short Definition</string>
+    <string name="title_long_def">Long Definition</string>
+    <string name="title_example">Example</string>
+    <string name="title_characteristic">Characteristic</string>
+    <string name="title_video_url">Video</string>
+    <string name="title_country">Country</string>
+    <string name="title_tag">Tags</string>
+</resources>

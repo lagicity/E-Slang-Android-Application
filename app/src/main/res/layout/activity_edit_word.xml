@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/edit_word"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.willi.e_slang.EditWord">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="backToDictionary"
+        android:scrollbars="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/appbar">
+
+    </android.support.v4.view.ViewPager>
+</RelativeLayout>
+
+
+
+
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="2dp"
+            android:orientation="vertical"
+            android:weightSum="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.49">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rect_border"
+                android:gravity="center"
+                android:paddingBottom="@dimen/default_gap"
+                android:paddingTop="@dimen/default_gap"
+                android:layout_marginTop="20dp"
+                android:text="Select the entry to edit using the scroller on the right.\nAll entries except the video URL must be filled!"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/enter_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="15dp"
+                android:text="Edit the word below."
+                android:textSize="18dp"
+                app:layout_constraintTop_toBottomOf="@+id/warning" />
+
+            <EditText
+                android:id="@+id/wordName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_gap"
+                android:layout_marginBottom="@dimen/default_gap"
+                android:inputType="text"
+                android:textColorHint="#FF3030" />
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/default_gap"
+                android:layout_marginTop="20dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/enter_short_def"
+                    android:layout_width="290dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginTop="@dimen/default_gap"
+                    android:text="Edit the short definition below."
+                    android:textSize="18dp" />
+
+                <Spinner
+                    android:id="@+id/short_def_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/preview_short_def"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rect_border"
+                android:hint="Short definition preview."
+                android:paddingBottom="@dimen/default_gap"
+                android:paddingLeft="@dimen/default_gap"
+                android:paddingRight="@dimen/default_gap"
+                android:paddingTop="@dimen/default_gap"
+                android:textSize="16dp" />
+
+
+
+            <EditText
+                android:id="@+id/shortTerm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_gap"
+                android:inputType="textMultiLine"
+                android:textColorHint="#FF3030" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="250dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/default_gap"
+                android:layout_marginTop="20dp"
+                 />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/enter_long_def"
+                    android:layout_width="290dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:text="Edit the long definition below."
+                    android:textSize="18dp" />
+
+                <Spinner
+                    android:id="@+id/long_def_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/preview_long_def"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rect_border"
+                android:hint="Long definition preview."
+                android:paddingBottom="@dimen/default_gap"
+                android:paddingLeft="@dimen/default_gap"
+                android:paddingRight="@dimen/default_gap"
+                android:paddingTop="@dimen/default_gap"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/longTerm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_gap"
+                android:inputType="textMultiLine"
+                android:textColorHint="#FF3030" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="250dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/default_gap"
+                android:layout_marginTop="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/enter_char"
+                    android:layout_width="290dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:text="Edit some characteristics below."
+                    android:textSize="18dp" />
+
+                <Spinner
+                    android:id="@+id/characteristic_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/preview_characteristic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_gap"
+                android:background="@drawable/rect_border"
+                android:hint="Characteristics preview."
+                android:paddingBottom="@dimen/default_gap"
+                android:paddingLeft="@dimen/default_gap"
+                android:paddingRight="@dimen/default_gap"
+                android:paddingTop="@dimen/default_gap"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/character"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_gap"
+                android:inputType="textMultiLine"
+                android:textColorHint="#FF3030" />
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/default_gap"
+                android:layout_marginTop="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/enter_example"
+                    android:layout_width="290dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginTop="@dimen/default_gap"
+                    android:text="Edit some examples below."
+                    android:textSize="18dp" />
+
+                <Spinner
+                    android:id="@+id/example_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/preview_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_gap"
+                android:background="@drawable/rect_border"
+                android:hint="Examples preview."
+                android:paddingBottom="@dimen/default_gap"
+                android:paddingLeft="@dimen/default_gap"
+                android:paddingRight="@dimen/default_gap"
+                android:paddingTop="@dimen/default_gap"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/example"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_marginBottom="@dimen/default_gap"
+                android:inputType="textPersonName"
+                android:textColorHint="#FF3030"/>
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/default_gap"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:id="@+id/warning2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_gap"
+                android:layout_marginTop="@dimen/default_gap"
+                android:background="@drawable/rect_border"
+                android:gravity="center"
+                android:paddingBottom="@dimen/default_gap"
+                android:paddingTop="@dimen/default_gap"
+                android:text="YouTube URLs must start with http:// "
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/enter_video_url"
+                    android:layout_width="290dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginTop="@dimen/default_gap"
+                    android:text="Edit the YouTube video URL below."
+                    android:textSize="18dp" />
+
+                <Spinner
+                    android:id="@+id/video_url_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/preview_video_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_gap"
+                android:background="@drawable/rect_border"
+                android:hint="Video URL preview."
+                android:paddingBottom="@dimen/default_gap"
+                android:paddingLeft="@dimen/default_gap"
+                android:paddingRight="@dimen/default_gap"
+                android:paddingTop="@dimen/default_gap"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/videoUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/default_gap"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:id="@+id/enter_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_gap"
+                android:text="Change the country below."
+                android:textSize="18dp" />
+
+            <Spinner
+                android:id="@+id/country_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="29dp"
+                android:layout_marginBottom="@dimen/default_gap"
+                android:hint="Select a country" />
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/default_gap"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/enter_tags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter some tags below."
+                android:textSize="18dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <EditText
+                    android:id="@+id/tag"
+                    android:layout_width="298dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.18"
+                    android:inputType="textMultiLine"
+                    android:textColorHint="#FF3030" />
+
+                <ImageButton
+                    android:id="@+id/plusTagBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:onClick="addTag"
+                    app:srcCompat="@android:drawable/ic_menu_add" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tagListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="13dp"
+                android:hint=" Tags added are shown here." />
+
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>-->

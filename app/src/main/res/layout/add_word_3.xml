@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="2dp"
+            android:orientation="vertical"
+            android:weightSum="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:paddingBottom="@dimen/default_gap"
+                android:paddingTop="@dimen/default_gap"
+                android:text="Happy with what you have entered? Add it!\nStill want to make changes? Go back!"
+                android:textSize="15dp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_word"
+                style="@style/title_headers"/>
+
+            <TextView
+                android:id="@+id/preview_word"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/default_gap"
+                android:paddingTop="@dimen/default_gap"
+                android:paddingLeft="@dimen/default_gap"
+                android:text="preview "
+                android:textSize="18dp"
+                android:background="@drawable/rect_border"/>
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="2dp"
+                style="@style/horizontal_divider"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_country"
+                style="@style/title_headers" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1">
+                <ImageView
+                    android:id="@+id/country_image"
+                    android:layout_width="44dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="0.16"
+                    app:srcCompat="@drawable/korea" />
+                <TextView
+                    android:id="@+id/preview_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="@dimen/default_gap"
+                    android:scrollbars="vertical"
+                    android:text="country"
+                    android:textSize="18dp" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="250dp"
+                android:layout_marginLeft="@dimen/default_gap"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="0.16"
+                android:background="#c0c0c0" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_short_def"
+                style="@style/title_headers" />
+            <TextView
+                android:id="@+id/preview_short_def"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/default_gap"
+                android:paddingTop="@dimen/default_gap"
+                android:paddingLeft="@dimen/default_gap"
+                android:text="preview "
+                android:textSize="18dp"
+                android:background="@drawable/rect_border"/>
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="2dp"
+                style="@style/horizontal_divider" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_long_def"
+                style="@style/title_headers" />
+            <TextView
+                android:id="@+id/preview_long_def"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/default_gap"
+                android:paddingTop="@dimen/default_gap"
+                android:paddingLeft="@dimen/default_gap"
+                android:text="preview "
+                android:textSize="18dp"
+                android:background="@drawable/rect_border"/>
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="2dp"
+                style="@style/horizontal_divider"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_characteristic"
+                style="@style/title_headers" />
+            <TextView
+                android:id="@+id/preview_characteristic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/default_gap"
+                android:paddingTop="@dimen/default_gap"
+                android:paddingLeft="@dimen/default_gap"
+                android:text="preview "
+                android:textSize="18dp"
+                android:background="@drawable/rect_border"/>
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="2dp"
+                style="@style/horizontal_divider" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_example"
+                style="@style/title_headers" />
+            <TextView
+                android:id="@+id/preview_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/default_gap"
+                android:paddingTop="@dimen/default_gap"
+                android:paddingLeft="@dimen/default_gap"
+                android:text="preview "
+                android:textSize="18dp"
+                android:background="@drawable/rect_border"/>
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="2dp"
+                style="@style/horizontal_divider" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_video_url"
+                style="@style/title_headers" />
+            <TextView
+                android:id="@+id/preview_video_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/default_gap"
+                android:paddingTop="@dimen/default_gap"
+                android:paddingLeft="@dimen/default_gap"
+                android:text="preview "
+                android:textSize="18dp"
+                android:background="@drawable/rect_border"/>
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="2dp"
+                style="@style/horizontal_divider" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_tag"
+                style="@style/title_headers" />
+            <TextView
+                android:id="@+id/preview_tag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/default_gap"
+                android:paddingTop="@dimen/default_gap"
+                android:paddingLeft="@dimen/default_gap"
+                android:layout_marginBottom="25dp"
+                android:text="preview "
+                android:textSize="18dp"
+                android:background="@drawable/rect_border"/>
+        </LinearLayout>
+</ScrollView>
